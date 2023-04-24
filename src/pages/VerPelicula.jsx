@@ -67,7 +67,7 @@ const VerPelicula = () => {
 
       <div className="movilS:w-full tablet:w-fit">
         <ReactPlayer
-          url={`http://localhost:5000/${pelicula.pelicula}`}
+          url={`${import.meta.env.VITE_BACKEND_URL}/${pelicula.pelicula}`}
           controls
           light
           playing

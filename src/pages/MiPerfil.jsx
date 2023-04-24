@@ -168,7 +168,9 @@ const MiPerfil = () => {
             </div>
             <Link to={`/pelicula/${pelicula._id}`}>
               <img
-                src={`http://localhost:5000/${pelicula.fotoPortada}`}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  pelicula.fotoPortada
+                }`}
                 alt={`Foto: ${pelicula.fotoPortada}`}
                 className="w-full"
               />

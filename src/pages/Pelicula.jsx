@@ -35,7 +35,9 @@ const Pelicula = () => {
     <div
       className="flex-1"
       style={{
-        backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://localhost:5000/${datosPelicula.fotoFondo}")`,
+        backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${
+          import.meta.env.VITE_BACKEND_URL
+        }/${datosPelicula.fotoFondo}")`,
         backgroundPosition: "50% 0",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -44,7 +46,9 @@ const Pelicula = () => {
       <div className="flex flex-col justify-between items-center gap-3">
         <div className="w-full flex movilS:flex-col tablet:flex-row justify-center items-center gap-4">
           <img
-            src={`http://localhost:5000/${datosPelicula.fotoPortada}`}
+            src={`${import.meta.env.VITE_BACKEND_URL}/${
+              datosPelicula.fotoPortada
+            }`}
             alt={datosPelicula.fotoPortada}
             className="w-fit movilS:h-36 movilL:h-40 tablet:h-56 laptop:h-96"
           />

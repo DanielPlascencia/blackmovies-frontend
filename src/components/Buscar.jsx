@@ -98,7 +98,9 @@ const Buscar = () => {
                               onClick={irAPeliculas}
                             >
                               <img
-                                src={`http://localhost:5000/${pelicula.fotoPortada}`}
+                                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                                  pelicula.fotoPortada
+                                }`}
                                 alt={`Foto: ${pelicula.fotoPortada}`}
                                 className="w-full"
                               />

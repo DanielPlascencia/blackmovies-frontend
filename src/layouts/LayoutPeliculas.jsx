@@ -78,12 +78,12 @@ const LayoutPeliculas = () => {
         );
         setGuardarPeliculas(respuesta.data);
       } catch (error) {
-        console.log(error.response.data.msg);
+        console.log(error.response?.data.msg);
 
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error.response.data.msg,
+          text: error.response?.data.msg,
         });
       }
     };
